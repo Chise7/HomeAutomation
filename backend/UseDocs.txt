@@ -1,7 +1,0 @@
-Dev Usage:
-
-Start Dev Server:
-uvicorn main:app --reload
-
-Notes:
-url/docs == SwaggerUI documentation for endpoints
