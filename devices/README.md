@@ -1,0 +1,1 @@
+This folder will be a collection of the code written for the individual microcontrollers and system devices.
