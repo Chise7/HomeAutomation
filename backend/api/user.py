@@ -9,5 +9,6 @@
 
 # 5. Run Test Suite, display result
 # 6. Post whether or not black ice was recorded, IE send to system that black ice was recorded
+# 7. Github commit/issue tracking logs displayed on app
 
 
