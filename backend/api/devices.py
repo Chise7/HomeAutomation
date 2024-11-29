@@ -21,9 +21,6 @@ class device(BaseModel):
     message: str
     status: str
 
-class ESP32(device):
-    pass
-
 class Pi(device):
     sensor_readings: dict
 
@@ -33,7 +30,7 @@ async def post_status():
     return{"message":"My status is: ----"}
 
 @router.post("/laundry") #Device will POST to /laundry with information about laundry status (started/ended)
-def message( ping: ESP32 ):
+def message( ping: device ):
     message = EmailMessage()
     message["From"] = private.sender
     message["To"] = private.reciever
