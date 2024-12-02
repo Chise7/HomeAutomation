@@ -1,4 +1,4 @@
-#Communication with Microcontrollers and Individual Systems
+#Devices -> Dashboard Communication
 
 # To Do: All for communication with devices (think, POV Devices)
 # 1. Websocket for system statuses?
@@ -17,12 +17,12 @@ from pydantic import BaseModel
 router = APIRouter()
 
 class device(BaseModel):
-    id: str
+    id: str #EX: PiZero, LaundryC6
     message: str
-    status: str
+    status: str #Online, Offline, Not In Use
 
 class Pi(device):
-    sensor_readings: dict
+    sensor_readings: dict #{Temperature, Moisture, CPU_Temperature}
 
 
 @router.post("/status")
