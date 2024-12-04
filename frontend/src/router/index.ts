@@ -5,7 +5,7 @@ import Systems from "../views/SystemsPage.vue";
 
 const routes: Array<RouteRecordRaw> = [
     {
-        path: '/Home',
+        path: '/',
         name: 'Home',
         component: Home
     },

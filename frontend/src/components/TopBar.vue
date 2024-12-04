@@ -3,7 +3,6 @@
     <nav>
         <button @click="navigateToHome">Home</button>
         <button @click="navigateToSystems">Systems</button>
-
         <!-- Add here notifications and github link -->
     </nav>
 </header>
