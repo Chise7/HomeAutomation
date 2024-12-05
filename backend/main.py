@@ -1,13 +1,13 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
-from backend.api.devices import router as devices_router #Microcontrollers to Webserver
-# from api.endpoints.user import router as user_router #User to Webserver
+from api.laundry import router as laundry_router
+from api.sensors import router as sensor_router 
 
 app = FastAPI()
 
 
-app.include_router(devices_router, prefix="/devices")
-# app.include_router(user_router, prefix="/user")
+app.include_router(laundry_router, prefix="/laundry")
+app.include_router(sensor_router, prefix="/sensor")
 
 
 #Examples:
