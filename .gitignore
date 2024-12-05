@@ -1,5 +1,5 @@
 backend/__pycache__
 backend/UseDocs.txt
-backend/core/private.py
+backend/settings/private.py
 backend/api/__pycache__
 .venv
