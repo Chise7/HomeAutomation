@@ -13,3 +13,4 @@ def error_log(ping: device):
 @router.get("/")
 def get_logs():
     return
+

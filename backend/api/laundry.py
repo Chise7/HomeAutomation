@@ -12,16 +12,10 @@ from core import utils
 router = APIRouter()
 
 
-@router.post("/") #Device will POST to /laundry with information about laundry status (started/ended)
+@router.post("/") #Device will POST to /laundry to initiate text
 def message( ping: device ):
     utils.send_message(ping.message)
     utils.update_status(device.id,device.status)
     return
 
-@router.get("/status/all")
-def get_status():
-    return utils.read_status("all")
 
-@router.get("/status/{device_id}")  #this will need checked
-def get_id_status(device_id):
-    return utils.read_status(device_id)

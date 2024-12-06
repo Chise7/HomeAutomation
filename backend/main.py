@@ -3,6 +3,7 @@ from pydantic import BaseModel
 from api.laundry import router as laundry_router
 from api.sensors import router as sensor_router 
 from api.logs import router as logs_router 
+from api.status import router as status_router 
 
 app = FastAPI()
 
@@ -10,6 +11,7 @@ app = FastAPI()
 app.include_router(laundry_router, prefix="/laundry")
 app.include_router(sensor_router, prefix="/sensor")
 app.include_router(logs_router, prefix="/logs")
+app.include_router(status_router, prefix="/status")
 
 #Examples:
 
