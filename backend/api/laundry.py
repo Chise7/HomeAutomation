@@ -6,16 +6,15 @@
 # 3. Laundry endpoint status sending
 
 from fastapi import APIRouter
-from core import device
+from backend.core.classes import laundry_device
 from core import utils
 
 router = APIRouter()
 
-
 @router.post("/") #Device will POST to /laundry to initiate text
-def message( ping: device ):
+def message( ping: laundry_device ):
     utils.send_message(ping.message)
-    utils.update_status(device.id,device.status)
+    utils.update_status(ping.device_id, ping.status)
     return
 
 

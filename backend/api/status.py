@@ -1,13 +1,14 @@
 #dedicated endpoint for device statuses
 
 from fastapi import APIRouter
-from core import device
+from backend.core.classes import device
 from core import utils
+
 router = APIRouter()
 
 @router.post("/") #Server gets device Statuses
-def get_device_status():
-    utils.update_status(device.id,device.status)
+def get_device_status(status: device):
+    utils.update_status(status)
     return
 
 @router.get("/all")
